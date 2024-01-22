@@ -132,7 +132,7 @@ const CountryTable = ({ countries }: CountryTableProps) => {
           <TableHead>
             <TableRow>
               <TableCell className="font-bold" align="left">ID</TableCell>
-              <TableCell className="font-bold" align="left">Code</TableCell>
+              <TableCell className="font-bold" align="left" style={{fontWeight:600}}>Code</TableCell>
               <TableCell className="font-bold" align="left">Name</TableCell>
               <TableCell className="font-bold" align="left">
                 <div className="flex items-center">
