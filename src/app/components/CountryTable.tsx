@@ -59,6 +59,7 @@ const CountryTable = ({ countries }: CountryTableProps) => {
     const id = open ? 'simple-popover' : undefined;
     const idx = openHasStates ? 'simple-popover' : undefined;
 
+    // Prepare rows data for the table
     const rows: CountryData[] = sortedCountries.map((country) => {
         const { id, code, name, nameUn, continent, hasStates } = country;
         return createData(
@@ -159,15 +160,16 @@ const CountryTable = ({ countries }: CountryTableProps) => {
                   }}
                 >
                 <FormControl fullWidth className="min-w-28">
-                  <InputLabel id="demo-simple-select-label">Filter By</InputLabel>
+                  <InputLabel id="select-id">Filter By</InputLabel>
                   <Select
                   value={selectedContinent}
                   label="continent"
                   onChange={(e) => handlesContinentFilter(e.target.value)}
+                  className='min-w-28'
                   >
                   {
-                    uniqueContinent && uniqueContinent.map((continent) => (
-                      <MenuItem key={continent} value={continent}>{continent}</MenuItem>
+                    uniqueContinent && uniqueContinent.map((continent, index) => (
+                      <MenuItem key={index} value={continent}>{continent}</MenuItem>
                     ))
                   }
                   </Select>
@@ -192,7 +194,7 @@ const CountryTable = ({ countries }: CountryTableProps) => {
                   }}
                 >
                 <FormControl fullWidth className="min-w-28">
-                  <InputLabel id="demo-simple-select-label">Filter By</InputLabel>
+                  <InputLabel id="select-label">Filter By</InputLabel>
                   <Select
                   value={hasStates}
                   label="hasStates"
