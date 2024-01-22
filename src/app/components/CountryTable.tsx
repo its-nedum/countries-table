@@ -199,6 +199,7 @@ const CountryTable = ({ countries }: CountryTableProps) => {
                   value={hasStates}
                   label="hasStates"
                   onChange={(e) => handlesHasStatesFilter(e.target.value)}
+                  className='min-w-28'
                   >
                     <MenuItem value={"true"}>{"true"}</MenuItem>
                     <MenuItem value={"false"}>{"false"}</MenuItem>
