@@ -21,3 +21,10 @@ Source data is attached in this archive:
 **Download the necessary files [https://cloud.logbookie.eu/s/jXHrjGaCmgw7GNx](https://cloud.logbookie.eu/s/jXHrjGaCmgw7GNx)**
 
 Thank you
+
+
+**HOW TO USE THIS APP**
+* Step 1: Download application files
+* Step 2: Install dependencies `npm install`
+* Step 3: Start app `npm run dev`
+
