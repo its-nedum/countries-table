@@ -24,7 +24,7 @@ Thank you
 
 
 **HOW TO USE THIS APP**
-* Step 1: Download application files
+* Step 1: Download or clone application files on github [https://github.com/its-nedum/countries-table.git](https://github.com/its-nedum/countries-table.git)
 * Step 2: Install dependencies `npm install`
 * Step 3: Start app `npm run dev`
 
