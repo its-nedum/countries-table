@@ -131,9 +131,9 @@ const CountryTable = ({ countries }: CountryTableProps) => {
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell className="font-bold" align="left">ID</TableCell>
+              <TableCell className="font-bold, font-[600]" align="left">ID</TableCell>
               <TableCell className="font-bold" align="left" style={{fontWeight:600}}>Code</TableCell>
-              <TableCell className="font-bold" align="left">Name</TableCell>
+              <TableCell className="font-[600]" align="left">Name</TableCell>
               <TableCell className="font-bold" align="left">
                 <div className="flex items-center">
                   <span className="mr-2">NameUn</span>
