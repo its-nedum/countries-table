@@ -131,10 +131,10 @@ const CountryTable = ({ countries }: CountryTableProps) => {
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell className="font-semibold" align="left">ID</TableCell>
-              <TableCell className="font-semibold" align="left">Code</TableCell>
-              <TableCell className="font-semibold" align="left">Name</TableCell>
-              <TableCell className="font-semibold" align="left">
+              <TableCell className="font-bold" align="left">ID</TableCell>
+              <TableCell className="font-bold" align="left">Code</TableCell>
+              <TableCell className="font-bold" align="left">Name</TableCell>
+              <TableCell className="font-bold" align="left">
                 <div className="flex items-center">
                   <span className="mr-2">NameUn</span>
                   <AiOutlineSortAscending 
@@ -143,7 +143,7 @@ const CountryTable = ({ countries }: CountryTableProps) => {
                   />
                 </div>
               </TableCell>
-              <TableCell className="font-semibold" align="left">
+              <TableCell className="font-bold" align="left">
                 <div className="flex items-center">
                   <span className="mr-2">Continent</span>
                   <div aria-describedby={id} onClick={(e) => handleClick(e)}>
@@ -177,7 +177,7 @@ const CountryTable = ({ countries }: CountryTableProps) => {
                 </Popover>
                 </div>
               </TableCell>
-              <TableCell className="font-semibold" align="left">
+              <TableCell className="font-bold" align="left">
                 <div className="flex items-center">
                   <span className="mr-2">hasStates</span>
                   <div aria-describedby={idx} onClick={(e) => hasStatesClick(e)}>
