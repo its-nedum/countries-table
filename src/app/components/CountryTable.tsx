@@ -12,11 +12,14 @@ import {
   Select,
   MenuItem,
   FormControl,
-  InputLabel
+  InputLabel,
+  Tooltip,
+  IconButton,
 } from "@mui/material";
 import { IoFunnelOutline } from "react-icons/io5";
 import { AiOutlineSortAscending } from "react-icons/ai";
-import { CountryData, CountryTableProps } from "../interfaces"
+import { CountryData, CountryTableProps } from "../interfaces";
+import { RxReset } from "react-icons/rx";
 
 function createData(
     id: string,
@@ -125,12 +128,30 @@ const CountryTable = ({ countries }: CountryTableProps) => {
     setSortedCountries(filtered);
   }
 
+  /**
+   * Handles resetting sort and filter results
+   */
+  const handleReset = () => {
+    setSortedCountries(countries);
+    setSelectedContinent("");
+    setHasStates("")
+  }
+
   return (
     <div className="container mx-auto">
+      <div className="flex mb-2 justify-between">
+        <p className="text-2xl">COUNTRIES TABLE</p>
+        <Tooltip title="Reset filter">
+          <IconButton>
+            <RxReset className="text-lg cursor-pointer" onClick={() => handleReset()}/>
+          </IconButton>
+        </Tooltip>
+      </div>
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
             <TableRow>
+              <TableCell className="font-bold" align="left">#</TableCell>
               <TableCell className="font-bold" align="left">ID</TableCell>
               <TableCell className="font-bold" align="left">Code</TableCell>
               <TableCell className="font-bold" align="left">Name</TableCell>
@@ -211,11 +232,12 @@ const CountryTable = ({ countries }: CountryTableProps) => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {rows.map((row) => (
+            {rows.map((row, index) => (
               <TableRow
                 key={row.id}
                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
               >
+                <TableCell align="left">{index + 1}</TableCell>
                 <TableCell align="left">{row.id}</TableCell>
                 <TableCell align="left">{row.code}</TableCell>
                 <TableCell align="left">{row.name}</TableCell>
