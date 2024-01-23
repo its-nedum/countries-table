@@ -1,11 +1,3 @@
-<!-- **INSTRUCTIONS:**
-
-- Create a React application. Please use React framework Next JS and CSS Tailwind. 
-- Deploy the React application to Vercel platform [ __https://vercel.com/__](https://vercel.com/)
-- Send your solution to the mail: [__zurek@logbookie.eu__](mailto:zurek@logbookie.eu). Include the link to Vercel and link to source code on GitLab.
-
-    
-  \*Please follow these instructions otherwise your solution will not be processed.\* -->
 
 **GUIDELINE to create a simple React application:**
 
